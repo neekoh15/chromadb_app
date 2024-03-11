@@ -1,4 +1,4 @@
-@autor: nmartinez@afip.gob.ar
+@author: nmartinez@afip.gob.ar
 
 ## INSTALL_DEPENDENCIES ##
 
