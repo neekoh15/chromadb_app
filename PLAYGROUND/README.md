@@ -12,8 +12,12 @@ Dentro 'src' encontraremos:
 
     query_database.py: contiene los metodos para conectarse a la base de datos previamente creada y realizar queries a la coleccion que se desee.
 
+
 [IMPORTANTE] Para evitar problemas de importaciones relativas, establecer como directorio raiz '\playground'
 
 Ejemplo de ejecucion de playground_database.py:
 
  ```<path_to_folder>..\chromadb\playground> python .\src\playground_database.py```
+
+
+@author: nmartinez@afip.gob.ar
