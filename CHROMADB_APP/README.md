@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 Montar la base de datos para produccion:
 
-Uso: chroma run # OPTIONS #
+Uso: chroma run <OPTIONS>
 
   Monta un servidor de chroma
 
