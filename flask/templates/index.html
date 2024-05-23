@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='/Roboto-Regular.ttf')}}"/> -->
+  </head>
+  <body>
+    <!--<a href="pagina2">Consultas Web</a>-->
+    <nav>
+      <img src="/static/afip.svg" alt="">
+
+      <div class="nms">
+        <div><b>SUBDIRECCION GENERAL DE SERVICIOS AL CONTRIBUYENTE</b></div>
+        <div>DIVISION PROGRAMAS DE SERVICIOS AL CONTRIBUYENTE</div>
+      </div>
+    </nav>
+
+    <div class="ln"></div>
+
+    <div class="breadcrumb">
+      <div class="inicio">
+        <a href="/crm">Ir a Simulador de consultas</a>
+      </div>
+    </div>
+
+    
+
+    <form action="/abc_consultas_frecuentes" method="POST" class="col form">
+      <div class="form-content">
+        <div style="display: flex; text-align: center; align-items: center; justify-content: center; gap: 5px;">
+          <h1>Preguntas frecuentes </h1> <h1 id="tag-monotributo"></h1>
+        </div>
+        
+        <h3 style="font-weight: 400;">¿En qué podemos ayudarte?</h3>
+
+        <div class="row formRow">
+          <input
+          required
+            type="text"
+            name="pregunta"
+            id="frase_input"
+            placeholder="Ingresá tu consulta"
+          />
+          <div class="button">
+            <button type="submit" style="background-color: #122047; height: 3rem;">CONSULTAR</button>
+          </div>
+        </div>
+
+        <div class="button" style="display: flex; justify-content: center; margin-top: 2rem;">
+          <button type="button" onclick="activarCategorias()"
+           style="color: white;border: 1px solid white; height: 3rem; background-color: inherit;">BUSCAR POR CATEGORIAS</button>
+        </div>
+      </div>
+    </form>
+
+    <main>
+      <div class="respuestas">
+        <div class="flex resultados-busqueda">
+          <h3>Resultados de tu búsqueda</h3>
+        </div>
+        
+        <div class="" id="respuestas_sugeridas">
+          
+        </div>
+
+        <div class="wrapper">
+          
+          <!-- <div class="respuesta">
+            <h4>Como gestionar tu clave fiscal?<img src="/static/chevron.svg" id="chevron"></h4>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+              fuga ipsum. Et voluptate, ipsum nisi sit consectetur consequatur,
+              recusandae necessitatibus unde beatae totam ratione libero at fuga
+              ducimus alias laborum! Corporis iusto deleniti quae earum ut aut
+              sint, adipisci dicta necessitatibus suscipit veniam, ipsa
+              reprehenderit aliquam fuga, provident odio error et aspernatur
+              quibusdam deserunt vero aliquid! Sunt delectus cumque dolores.
+              Sequi totam assumenda delectus maxime ducimus inventore ut
+              doloribus aliquid quas perferendis nulla eveniet eum vitae
+              voluptatum neque eos dolores maiores vero, reprehenderit sint
+              laboriosam odio, odit quia! Culpa, dicta?
+            </div>
+          </div>
+
+          <div class="respuesta">
+            <h4>Como gestionar una consulta web?</h4>
+
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+              fuga ipsum. Et voluptate, ipsum nisi sit consectetur consequatur,
+              recusandae necessitatibus unde beatae totam ratione libero at fuga
+              ducimus alias laborum! Corporis iusto deleniti quae earum ut aut
+              sint, adipisci dicta necessitatibus suscipit veniam, ipsa
+              reprehenderit aliquam fuga, provident odio error et aspernatur
+              quibusdam deserunt vero aliquid! Sunt delectus cumque dolores.
+              Sequi totam assumenda delectus maxime ducimus inventore ut
+              doloribus aliquid quas perferendis nulla eveniet eum vitae
+              voluptatum neque eos dolores maiores vero, reprehenderit sint
+              laboriosam odio, odit quia! Culpa, dicta?
+            </div>
+          </div> -->
+
+        </div>
+
+      </div>
+
+      <div class="cats">
+
+        <div class="flex cat" style="justify-content: center;">
+          <h3>Categorias</h3>
+        </div>
+        
+        <div class="categorias">
+          <div class="card">Actividades Agropecuarias</div>
+          <div class="card">Aduana - Servicios y Comercio Exterior</div>
+          <div class="card">Autónomos</div>
+
+          <div class="card">Casas Particulares</div>
+          <div class="card">CETA</div>
+          <div class="card">Clave Fiscal</div>
+
+          <div class="card">CUIT</div>
+          <div class="card">Facturación</div>
+          <div class="card">Fiscalidad Internacional</div>
+
+          <div class="card">Impuestos</div>
+          <div class="card">Inmuebles y construcción</div>
+          <div class="card">Monotributo</div>
+
+          <div class="card">Planes de facilidades de pago</div>
+          <div class="card">Presentaciones digitales</div>
+          <div class="card">Procedimiento Fiscal</div>
+
+          <div class="card">Regimen General</div>
+          <div class="card">Regimenes de Retencion y Percepcion</div>
+          <div class="card">Regimenes de Informacion</div>
+
+          <div class="card">Registro Unico Tributario - Padron Federal</div>
+          <div class="card">Registros</div>
+          <div class="card">Seguridad Social</div>
+
+          <div class="card">SiRADIG</div>
+          <div class="card">Sistemas y aplicativos</div>
+          <div class="card">Tramites</div>
+        </div>
+      </div>
+    </main>
+
+    <div class="desarrollador">nmartinez@afip.gob.ar</div>
+
+    <footer style="margin-top: 5vh;">
+      <div class="footer">
+        <div class="lside">
+          <img src="/static/afip-w.svg" alt="">
+          <div style="color: white; display:flex; flex-direction: column; gap:1rem">
+            <h3>ABC PREGUNTAS FRECUENTES</h3>
+            <p>Prototipo con inteligencia artificial</p>
+          </div>
+  
+        </div>
+
+        <div class="rside" style="color: white; text-align: right;">
+          <div class="">Contactos</div>
+          <div class="">Glosario</div>
+          <div class="">Institucional</div>
+
+        </div>
+
+      </div>
+      
+    </footer>
+  </body>
+
+  <script>
+    const url_monotributo = "/monotributo_respuestas"
+    const url_abc = "/abc_consultas_frecuentes"
+
+    const urls = [url_monotributo, url_abc]
+    const url = urls[1]
+
+    const content = (url == urls[1]) ? '' : '- Monotributo'
+    document.getElementById("tag-monotributo").innerHTML = content
+    
+
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var formData = new FormData(this);
+
+      fetch(url, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+
+          document.querySelector('.resultados-busqueda').style.display = 'flex'
+
+          var div_respuestas = document.querySelector(".wrapper");
+
+          div_respuestas.innerHTML = "";
+          var preguntas_vistas = [];
+
+          //console.log("div_respeutas: ", div_respuestas);
+
+          data.metadatas[0].forEach((element) => {
+            //console.log("pregunta: ", element.pregunta);
+            //console.log("respuesta: ", element.respuesta);
+
+            if (!preguntas_vistas.includes(element.pregunta)) {
+              var div_respuesta = document.createElement("div");
+              div_respuesta.className = "respuesta"; // Usar className en lugar de addClassName
+
+              var pregunta = document.createElement("h4");
+              pregunta.innerHTML = element.pregunta;
+
+              var chevron = document.createElement('img')
+              chevron.src = '/static/chevron.svg'
+              chevron.id = 'chevron'
+              chevron.className = 'chevron'
+              pregunta.appendChild(chevron)
+
+              //console.log("pregunta: ", pregunta);
+
+              var respuesta = document.createElement("div");
+              respuesta.className = "content"; // Usar className en lugar de addClassName
+              respuesta.innerHTML = element.respuesta;
+
+              //console.log("respueta: ", respuesta);
+
+              div_respuesta.appendChild(pregunta); // Usar appendChild para agregar elementos hijos
+              div_respuesta.appendChild(respuesta); // Usar appendChild para agregar elementos hijos
+
+              div_respuesta.addEventListener("click", function (e) {
+                //console.log("Respuesta clickeada: ", respuesta);
+                var block = div_respuesta.querySelector(".content");
+                var chevron = div_respuesta.querySelector('#chevron')
+
+                if (chevron.style.transform !== 'rotate(180deg)') {
+                    chevron.style.transform = 'rotate(180deg)';
+                } else {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+
+                div_respuesta.style.height = "fit-content";
+
+                if (block.style.display != "block") {
+                  block.style.display = "block";
+                } else {
+                  block.style.display = "none";
+                }
+              });
+
+              div_respuestas.appendChild(div_respuesta);
+              preguntas_vistas.push(element.pregunta);
+            }
+          });
+        })
+        //.catch((error) => alert("Error: ", error));
+
+      //get_links(formData)
+    });
+  
+    function activarCategorias() {
+      document.querySelector(".cats").style.display = 'grid'
+    }
+
+    function get_links(form) {
+      var pregunta = form.get("pregunta")
+
+      var data = {
+        pregunta: pregunta
+      }
+
+      fetch("/get_links", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'Application/json'
+        },
+        body: JSON.stringify(data),
+      })
+      .then(r => r.text()) 
+      .then(response => console.log('SUGERENCIAS DE GUIAS, MICROSITIOS Y TUTORIALES: ', decodeURIComponent(escape(response))))
+    }
+  
+  </script>
+
+  <style>
+
+    footer {
+      margin-top: 15vh;
+      background-color: #122047;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .footer {
+      max-width: 1244px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .lside {
+      display: flex;
+      gap: 1rem;
+
+    }
+
+    #chevron {
+      transition: 0.3s;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: "Roboto"; /* Nombre que le asignarás a la fuente */
+      src: url('/static/fonts/Roboto/Roboto-Light.ttf') format("truetype");
+    }
+
+    @font-face {
+      font-family: "Roboto-Regular"; /* Nombre que le asignarás a la fuente */
+      src: url('/static/fonts/Roboto/Roboto-Regular.ttf') format("truetype");
+    }
+
+    body {
+      font-family:'Roboto',sans-serif; /* Usa la fuente con el nombre que le asignaste */
+    }
+
+    .desarrollador {
+      font-size: 20px;
+      position: fixed;
+      top: 0;
+      left: 80vw;
+      color: rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+
+    nav {
+      max-width: 1244px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 107px;
+    }
+    .ln {
+      width: 100%;
+      height: 3px;
+      background-color: #139ed9;
+    }
+    .nms {
+      text-align: right;
+      font-size: 18px;
+      color: #3a69e9;
+    }
+
+    .breadcrumb {
+      position: relative;
+      height: 36px;
+      background-color: #122047;
+      color: white;
+    }
+
+    .inicio {
+      font-size: 14px;
+      max-width: 1244px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 1rem;
+      height: 2rem;
+      line-height: 16.41px;
+    }
+
+    a {
+      outline: none;
+      text-decoration: none;
+      color: white;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      font-size: 16px;
+    }
+    main {
+      margin-top: 4rem;
+      min-height: 40vh;
+      max-width: 1244px;
+      margin-inline: auto;
+    }
+    .drop {
+      cursor: pointer;
+    }
+
+    .respuestas {
+      margin-top: 2rem;
+      position: relative;
+      display: grid;
+      gap: 1rem;
+    }
+
+    
+    .wrapper {
+      display: grid;
+      gap: 2rem;
+      transition: 1s;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .fil {
+      display: flex;
+      flex-direction: row;
+      gap: 0.3rem;
+    }
+
+    input,
+    textarea {
+      outline: none;
+      border: none;
+      height: 3rem;
+      border-radius: 4px;
+      text-indent: 0.5rem;
+      font-size:16px;
+      padding-left:1rem;
+    }
+|
+    textarea {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      width: 95%;
+      min-height: 15vh;
+    }
+
+    button {
+      background-color: #0072bb;
+      border-radius: 4px;
+      color: white;
+      border: none;
+      height: 2rem;
+      width: fit-content;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      min-width: 25%;
+      cursor: pointer;
+    }
+
+    .button {
+      display: flex;
+      gap: 1rem;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    .form {
+      position: relative;
+      display: grid;
+      align-items: center;
+      gap: 1rem;
+      background-color: #294aa5;
+      text-align: center;
+      min-height: 381px;
+      border-radius: 0 0 7vw 0;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-content {
+      display: grid;
+      gap: 1rem;
+      width: 70%;
+      max-width: 1244px;
+      margin-inline: auto;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .formRow {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .formRow input {
+      width: 100%;
+    }
+
+    .consulta {
+      display: none;
+      margin-top: 2rem;
+      background-color: white;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1rem;
+    }
+
+    .cats {
+      margin-top: 3rem;
+      display: none;
+      gap: 1rem;
+    }
+
+    .card {
+      border-left: 6px solid #294aa5;
+      border-radius: 4px;
+      background-color: white;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+      font-size: 18px;
+    }
+
+    .respuesta {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      max-width: 100%;
+      min-height: 3rem;
+      transition: 1s;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    .respuesta h4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      display: flex;
+      min-height: 3rem;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #E7F0F4;
+      font-family: "Roboto";
+      font-size: 18px;
+    }
+
+    .content {
+      border-top: 1px solid #ccc;
+      padding: 1rem;
+      display: none;
+      height: 100%;
+      max-width: 100%;
+    }
+
+    .resultados-busqueda {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      font-weight: 700;
+      font-family: 'Roboto-Regular';
+      font-size: 24px;
+    }
+
+    .cat {
+      height: 3rem;
+      font-weight: 700;
+      font-family: 'Roboto-Regular';
+      font-size: 24px;
+    }
+
+    .secundario {
+      height: 3rem; 
+      color: #122047; 
+      border: 1px solid #122047; 
+      font-size: 16px; 
+      margin: 0;
+      padding: 0;
+      width: 3rem;
+      background-color: inherit;
+    }
+
+  </style>
+</html>
