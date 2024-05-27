@@ -93,3 +93,5 @@ La finalidad última del proyecto es generar un sistema RAG. Un sistema RAG comb
 Este proyecto demuestra cómo las técnicas avanzadas de búsqueda semántica, basadas en embeddings vectoriales y la implementación de un sistema RAG, pueden transformar y mejorar significativamente la manera en que los usuarios acceden y recuperan información relevante de grandes bases de datos de documentos. La integración de ChromaDB con una aplicación web mediante Flask proporciona una solución robusta y eficiente para manejar y realizar consultas en tiempo real.
 
 @author: nmartinez@afip.gob.ar
+
+@Colaboradores: Polito Julian, Karamanian Sebastian, Rodolfo Tillet y el equipo de experiencia de usuario de DV PSCO
