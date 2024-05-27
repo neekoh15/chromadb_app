@@ -78,10 +78,12 @@ Uso: chroma run [<b>OPTIONS</b>]
 
 ## Sistema de aprendizaje continuo
 
-![Imagen del marco de aprendizaje del sistema](aprendizaje.png)
+![Imagen del marco de aprendizaje del sistema](https://github.com/neekoh15/chromadb_app/blob/main/CHROMADB_APP/aprendizaje.png)
 
 
 ## Sistema RAG (Retrieval-Augmented Generation)
+
+![Sistema RAG](https://github.com/neekoh15/chromadb_app/blob/main/CHROMADB_APP/rag.png)
 
 La finalidad última del proyecto es generar un sistema RAG. Un sistema RAG combina la recuperación de información (retrieval) con la generación de texto (generation). Este sistema no solo busca documentos relevantes, sino que también puede generar respuestas coherentes y contextualmente precisas basadas en la información recuperada. 
 
