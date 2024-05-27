@@ -33,11 +33,6 @@ Las búsquedas semánticas, apoyadas en técnicas de vectorización, ofrecen una
      4. **Recuperación de Resultados:** ChromaDB realiza la búsqueda en la base de datos vectorial y retorna los documentos más relevantes.
      5. **Presentación de Resultados:** Los documentos relevantes son presentados al usuario en la interfaz web.
 
-## Conclusión
-
-Este proyecto demuestra cómo las técnicas avanzadas de búsqueda semántica, basadas en embeddings vectoriales, pueden transformar y mejorar significativamente la manera en que los usuarios acceden y recuperan información relevante de grandes bases de datos de documentos. La integración de ChromaDB con una aplicación web mediante Flask proporciona una solución robusta y eficiente para manejar y realizar consultas en tiempo real.
-
-@author: nmartinez@afip.gob.ar
 
 # CONFIGURACIÓN DEL PROYECTO
 
@@ -92,3 +87,9 @@ La finalidad última del proyecto es generar un sistema RAG. Un sistema RAG comb
 - **Mejora de Precisión:** Al combinar la recuperación de documentos con la generación de texto, el sistema proporciona respuestas más precisas y detalladas.
 - **Interacción Natural:** Los usuarios interactúan con el sistema de manera más natural, recibiendo respuestas completas y contextualmente relevantes, similar a una conversación humana.
 - **Eficiencia en la Búsqueda:** El sistema reduce el esfuerzo del usuario al proporcionar directamente la información relevante sin necesidad de buscar en múltiples documentos.
+
+## Conclusión
+
+Este proyecto demuestra cómo las técnicas avanzadas de búsqueda semántica, basadas en embeddings vectoriales y la implementación de un sistema RAG, pueden transformar y mejorar significativamente la manera en que los usuarios acceden y recuperan información relevante de grandes bases de datos de documentos. La integración de ChromaDB con una aplicación web mediante Flask proporciona una solución robusta y eficiente para manejar y realizar consultas en tiempo real.
+
+@author: nmartinez@afip.gob.ar
