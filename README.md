@@ -13,6 +13,8 @@ Las búsquedas semánticas, apoyadas en técnicas de vectorización, ofrecen una
 
 ## Flujo de Trabajo de la Aplicación
 
+![Imagen del flujo de trabajo de la aplicacion](https://github.com/neekoh15/chromadb_app/blob/main/CHROMADB_APP/diagrama.png)
+
 ### 1. Base de Datos Vectorial (ChromaDB)
    - **Descripción:** ChromaDB es utilizada como la base de datos vectorial donde se almacenan las representaciones vectoriales de los documentos de consultas frecuentes de AFIP.
    - **Funcionamiento:** Los documentos son preprocesados y convertidos a vectores mediante técnicas de embeddings. Estos vectores son luego almacenados en ChromaDB, permitiendo búsquedas eficientes y precisas.
@@ -31,13 +33,65 @@ Las búsquedas semánticas, apoyadas en técnicas de vectorización, ofrecen una
      4. **Recuperación de Resultados:** ChromaDB realiza la búsqueda en la base de datos vectorial y retorna los documentos más relevantes.
      5. **Presentación de Resultados:** Los documentos relevantes son presentados al usuario en la interfaz web.
 
+
+# CONFIGURACIÓN DEL PROYECTO
+
+## INSTALL_DEPENDENCIES ##
+
+pip install -r requirements.txt
+
+
+## START_SERVER ##
+
+Montar la base de datos para produccion:
+
+Uso: chroma run [<b>OPTIONS</b>]
+
+  Monta un servidor de chroma
+
+  Opciones:
+  
+    --path TEXT      El path a la base de datos.  [default: ./chroma_data]
+    
+    --host TEXT      El host desde donde se escuchara. Default: localhost  [default: localhost]
+    
+    --log-path TEXT  El path a la carpeta de logs.  [default: chroma.log]
+    
+    --port INTEGER   El puerto donde correra el servidor.  [default: 8000]
+
+
+  Para montar correctamente el servidor local de chroma para este proyecto ejecutar:
+  
+    chroma run --path './database' --host '127.0.0.1' --port 8000 --log-path './logs/chroma.log'
+
+  '--log-path' solo es soportado en la ultima version de chromadb, asegurarse de tenerla instalada:
+  
+    pip install --upgrade chromadb
+
+
+# FUTURAS IMPLEMENTACIONES DE MEJORAS DEL SISTEMA
+
+## Sistema de aprendizaje continuo
+
+![Imagen del marco de aprendizaje del sistema](https://github.com/neekoh15/chromadb_app/blob/main/CHROMADB_APP/aprendizaje.png)
+
+
+## Sistema RAG (Retrieval-Augmented Generation)
+
+![Sistema RAG](https://github.com/neekoh15/chromadb_app/blob/main/CHROMADB_APP/rag.png)
+
+La finalidad última del proyecto es generar un sistema RAG. Un sistema RAG combina la recuperación de información (retrieval) con la generación de texto (generation). Este sistema no solo busca documentos relevantes, sino que también puede generar respuestas coherentes y contextualmente precisas basadas en la información recuperada. 
+
+### Impacto en la Experiencia de Usuario
+
+- **Mejora de Precisión:** Al combinar la recuperación de documentos con la generación de texto, el sistema proporciona respuestas más precisas y detalladas.
+- **Interacción Natural:** Los usuarios interactúan con el sistema de manera más natural, recibiendo respuestas completas y contextualmente relevantes, similar a una conversación humana.
+- **Eficiencia en la Búsqueda:** El sistema reduce el esfuerzo del usuario al proporcionar directamente la información relevante sin necesidad de buscar en múltiples documentos.
+
 ## Conclusión
 
-Este proyecto demuestra cómo las técnicas avanzadas de búsqueda semántica, basadas en embeddings vectoriales, pueden transformar y mejorar significativamente la manera en que los usuarios acceden y recuperan información relevante de grandes bases de datos de documentos. La integración de ChromaDB con una aplicación web mediante Flask proporciona una solución robusta y eficiente para manejar y realizar consultas en tiempo real.
-
-
-## PLAYGROUND ##
-
-Modulo para realizar pruebas y conocer la herramienta
+Este proyecto demuestra cómo las técnicas avanzadas de búsqueda semántica, basadas en embeddings vectoriales y la implementación de un sistema RAG, pueden transformar y mejorar significativamente la manera en que los usuarios acceden y recuperan información relevante de grandes bases de datos de documentos. La integración de ChromaDB con una aplicación web mediante Flask proporciona una solución robusta y eficiente para manejar y realizar consultas en tiempo real.
 
 @author: nmartinez@afip.gob.ar
+
+@Colaboradores: Polito Julian, Karamanian Sebastian, Rodolfo Tillet y el equipo de experiencia de usuario de DV PSCO
