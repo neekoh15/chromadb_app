@@ -39,6 +39,8 @@ Este proyecto demuestra cómo las técnicas avanzadas de búsqueda semántica, b
 
 @author: nmartinez@afip.gob.ar
 
+# CONFIGURACIÓN DEL PROYECTO
+
 ## INSTALL_DEPENDENCIES ##
 
 pip install -r requirements.txt
@@ -70,3 +72,21 @@ Uso: chroma run [<b>OPTIONS</b>]
   '--log-path' solo es soportado en la ultima version de chromadb, asegurarse de tenerla instalada:
   
     pip install --upgrade chromadb
+
+
+# FUTURAS IMPLEMENTACIONES DE MEJORAS DEL SISTEMA
+
+## Sistema de aprendizaje continuo
+
+![Imagen del marco de aprendizaje del sistema](aprendizaje.png)
+
+
+## Sistema RAG (Retrieval-Augmented Generation)
+
+La finalidad última del proyecto es generar un sistema RAG. Un sistema RAG combina la recuperación de información (retrieval) con la generación de texto (generation). Este sistema no solo busca documentos relevantes, sino que también puede generar respuestas coherentes y contextualmente precisas basadas en la información recuperada. 
+
+### Impacto en la Experiencia de Usuario
+
+- **Mejora de Precisión:** Al combinar la recuperación de documentos con la generación de texto, el sistema proporciona respuestas más precisas y detalladas.
+- **Interacción Natural:** Los usuarios interactúan con el sistema de manera más natural, recibiendo respuestas completas y contextualmente relevantes, similar a una conversación humana.
+- **Eficiencia en la Búsqueda:** El sistema reduce el esfuerzo del usuario al proporcionar directamente la información relevante sin necesidad de buscar en múltiples documentos.
