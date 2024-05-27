@@ -13,6 +13,8 @@ Las búsquedas semánticas, apoyadas en técnicas de vectorización, ofrecen una
 
 ## Flujo de Trabajo de la Aplicación
 
+![Imagen del flujo de trabajo de la aplicacion](https://github.com/neekoh15/chromadb_app/blob/main/CHROMADB_APP/diagrama.png)
+
 ### 1. Base de Datos Vectorial (ChromaDB)
    - **Descripción:** ChromaDB es utilizada como la base de datos vectorial donde se almacenan las representaciones vectoriales de los documentos de consultas frecuentes de AFIP.
    - **Funcionamiento:** Los documentos son preprocesados y convertidos a vectores mediante técnicas de embeddings. Estos vectores son luego almacenados en ChromaDB, permitiendo búsquedas eficientes y precisas.
